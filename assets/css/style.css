@@ -3,19 +3,152 @@
 :root{
 
     --ff-ubuntu: 'Ubuntu', sans-serif;
+    --marine-blue: hsl(213, 96%, 18%);
+    --purplish-blue: hsl(243, 100%, 62%);
+    --pastel-blue: hsl(228, 100%, 84%);
+    --light-blue: hsl(206, 94%, 87%);
+    --strawberry-red: hsl(354, 84%, 57%);
 
+    --cool-gray: hsl(231, 11%, 63%);
+    --light-gray: hsl(229, 24%, 87%);
+    --magnolia: hsl(217, 100%, 97%);
+    --alabaster: hsl(231, 100%, 99%);
+    --white: hsl(0, 0%, 100%);
+
+    --fs-100: 0.75em;
+    --fs-200: 0.85em;
+    --fs-300: 1.25em;
+    --fs-400: 1.45em;
+    --fs-500: 1.85em;
+    --fs-600: 2.05em;
+
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-700: 700;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-ubuntu);
+}
+button, a, .step-circle{
+    cursor: pointer;
+}
+label{
+    font-size: var(--fs-200);
+    color: var(--marine-blue);
+}
+input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--cool-gray);
+    outline: none;
+    margin-top: 5px;
+    width: 100%;
+}
+input::placeholder{
+    color: var(--cool-gray);
+    font-weight: var(--fw-700);
+    
 }
 
 .step-type p,
-.step-type h2{
+.step-type h4{
     text-transform: uppercase;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--light-gray);
 }
 
 
 
 @media (min-width: 650px) {
-    
+    .mobile-footer{
+        display: none;
+    }
+
     .container{
-        
+        display: flex;
+        background: var(--white);
+        border-radius: 20px;
+        padding: 10px;
+        max-width: 750px;
+    }
+
+    .side-bar{
+        border-radius: 10px;
+        background: url(../images/bg-sidebar-desktop.svg) no-repeat;
+        background-size: cover;
+        padding: 15px 20px;
+        width: 240px;
+        height: 450px;
+    }
+
+    .step-box-id{
+        display: flex;
+        align-items: center;
+        margin: 25px 0;
+    }
+    .step-circle{
+        color: var(--white);
+        border: 1px solid var(--white);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--fs-200);
+        font-weight: var(--fw-500);
+        margin-right: 10px;
+    }
+    .step-circle.active{
+        color: var(--marine-blue);
+        background: var(--light-blue);
+        border: none;
+    }
+    .step-type p{
+        color: var(--cool-gray);
+        font-size: var(--fs-100);
+        font-weight: var(--fw-400);
+        margin-bottom: 3px;
+    }
+    .step-type h4{
+        color: var(--white);
+        font-size: var(--fs-100);
+        font-weight: var(--fw-700);
+    }
+
+    .step-information{
+        padding: 40px 80px 0;
+    }
+    .primary-header{
+        font-size: var(--fs-400);
+    }
+    .primary-paragraph{
+        font-size: var(--fs-200);
+        margin: 10px 0 25px;
+    }
+    .form-input{
+        margin-bottom: 10px;
+    }
+
+    .step-information footer{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 60px;
+    }
+    .next-step-btn{
+        border-radius: 5px;
+        border: none;
+        color: var(--white);
+        background: var(--marine-blue);
+        padding: 10px 15px;
     }
 }
