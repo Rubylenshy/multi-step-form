@@ -5,3 +5,17 @@
     --ff-ubuntu: 'Ubuntu', sans-serif;
 
 }
+
+.step-type p,
+.step-type h2{
+    text-transform: uppercase;
+}
+
+
+
+@media (min-width: 650px) {
+    
+    .container{
+        
+    }
+}
