@@ -17,6 +17,7 @@
 
     --fs-100: 0.75em;
     --fs-200: 0.85em;
+    --fs-250: 1.05em;
     --fs-300: 1.25em;
     --fs-400: 1.45em;
     --fs-500: 1.85em;
@@ -39,6 +40,12 @@ button, a, .step-circle{
 label{
     font-size: var(--fs-200);
     color: var(--marine-blue);
+    display: flex;
+    justify-content: space-between;
+}
+label > small{
+    color: var(--strawberry-red);
+    display: none;
 }
 input{
     padding: 10px;
@@ -48,29 +55,116 @@ input{
     margin-top: 5px;
     width: 100%;
 }
+input:hover{
+    border: 1px solid;
+    border-color: linear-gradient(
+        to right, hsl(231, 11%, 63%), hsl(213, 96%, 18%)
+    );
+    /* outline: none; */
+}
+input.error{
+    border: 1px solid var(--strawberry-red);
+}
 input::placeholder{
     color: var(--cool-gray);
     font-weight: var(--fw-700);
     
 }
 
+/* Mobile layout differences */
+.step-type,
+.step-information footer{
+    display: none;
+}
+
 .step-type p,
 .step-type h4{
     text-transform: uppercase;
 }
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+body{
     background: var(--light-gray);
 }
 
+.side-bar{
+    background: url(../images/bg-sidebar-mobile.svg) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    height: 170px;
+}
+.step-circle{
+    color: var(--white);
+    border: 1px solid var(--white);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--fs-200);
+    font-weight: var(--fw-500);
+    margin-right: 10px;
+    transition: all .4s;
+}
 
+.step-information{
+    padding: 40px 20px;
+    background: var(--white);
+    margin: -80px auto 0;
+    width: 90%;
+    border-radius: 10px;
+}
+.primary-header{
+    font-size: var(--fs-400);
+}
+.primary-paragraph{
+    font-size: var(--fs-200);
+    margin: 10px 0 25px;
+}
+.form-input{
+    margin-bottom: 10px;
+}
 
-@media (min-width: 650px) {
+.mobile-footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    height: 10vh;
+    width: 100%;
+    background: var(--white);
+    top: 90vh;
+    padding: 0 20px;
+}
+.next-step-btn{
+    border-radius: 5px;
+    border: none;
+    color: var(--white);
+    font-size: var(--fs-250);
+    font-weight: var(--fw-400);
+    background: var(--marine-blue);
+    padding: 15px 20px;
+}
+
+@media (min-width: 750px) {
+
+    /* Desktop layout differences */
+    .step-type{
+        display: block;
+    }
+
     .mobile-footer{
         display: none;
+    }
+
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: var(--light-gray);
     }
 
     .container{
@@ -85,29 +179,24 @@ main{
         border-radius: 10px;
         background: url(../images/bg-sidebar-desktop.svg) no-repeat;
         background-size: cover;
+        display: block;
         padding: 15px 20px;
         width: 240px;
         height: 450px;
     }
 
+    .step-circle{
+        width: 30px;
+        height: 30px;
+    }
     .step-box-id{
         display: flex;
         align-items: center;
         margin: 25px 0;
     }
-    .step-circle{
-        color: var(--white);
-        border: 1px solid var(--white);
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: var(--fs-200);
-        font-weight: var(--fw-500);
-        margin-right: 10px;
-    }
+    
+    
+    .step-circle:hover,
     .step-circle.active{
         color: var(--marine-blue);
         background: var(--light-blue);
@@ -128,27 +217,11 @@ main{
     .step-information{
         padding: 40px 80px 0;
     }
-    .primary-header{
-        font-size: var(--fs-400);
-    }
-    .primary-paragraph{
-        font-size: var(--fs-200);
-        margin: 10px 0 25px;
-    }
-    .form-input{
-        margin-bottom: 10px;
-    }
 
     .step-information footer{
         display: flex;
         justify-content: flex-end;
         margin-top: 60px;
     }
-    .next-step-btn{
-        border-radius: 5px;
-        border: none;
-        color: var(--white);
-        background: var(--marine-blue);
-        padding: 10px 15px;
-    }
+    
 }
