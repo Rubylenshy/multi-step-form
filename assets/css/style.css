@@ -108,6 +108,12 @@ body{
     margin-right: 10px;
     transition: all .4s;
 }
+.step-circle:hover,
+.step-circle.active{
+    color: var(--marine-blue);
+    background: var(--light-blue);
+    border: none;
+}
 
 .step-information{
     padding: 40px 20px;
@@ -196,12 +202,6 @@ body{
     }
     
     
-    .step-circle:hover,
-    .step-circle.active{
-        color: var(--marine-blue);
-        background: var(--light-blue);
-        border: none;
-    }
     .step-type p{
         color: var(--cool-gray);
         font-size: var(--fs-100);
@@ -216,6 +216,10 @@ body{
 
     .step-information{
         padding: 40px 80px 0;
+        background: none;
+        margin: 0;
+        width: auto;
+        border-radius: none;
     }
 
     .step-information footer{
@@ -223,5 +227,7 @@ body{
         justify-content: flex-end;
         margin-top: 60px;
     }
-    
+    .next-step-btn{
+        padding: 10px 15px;
+    }
 }
