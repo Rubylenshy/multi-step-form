@@ -70,10 +70,20 @@ input::placeholder{
     font-weight: var(--fw-700);
     
 }
+.step-information{
+    display: flex;
+    max-width: 100%;
+}
+.step-information-one,
+.step-information-two{
+    width: 100%;
+    flex-shrink: 0;
+    transform: scale(1);
+}
 
 /* Mobile layout differences */
 .step-type,
-.step-information footer{
+.step-information-one footer{
     display: none;
 }
 
@@ -115,7 +125,7 @@ body{
     border: none;
 }
 
-.step-information{
+.step-information-one{
     padding: 40px 20px;
     background: var(--white);
     margin: -80px auto 0;
@@ -214,7 +224,7 @@ body{
         font-weight: var(--fw-700);
     }
 
-    .step-information{
+    .step-information-one{
         padding: 40px 80px 0;
         background: none;
         margin: 0;
@@ -222,7 +232,7 @@ body{
         border-radius: none;
     }
 
-    .step-information footer{
+    .step-information-one footer{
         display: flex;
         justify-content: flex-end;
         margin-top: 60px;
