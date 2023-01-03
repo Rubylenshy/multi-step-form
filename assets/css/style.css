@@ -73,12 +73,16 @@ input::placeholder{
 .step-information{
     display: flex;
     max-width: 100%;
+    overflow: hidden;
 }
-.step-information-one,
-.step-information-two{
-    width: 100%;
+.step-information > div{
+    width: 90%;
+    margin: -80px 5% 0;
     flex-shrink: 0;
     transform: scale(1);
+    padding: 40px 20px;
+    background: var(--white);
+    border-radius: 10px;
 }
 
 /* Mobile layout differences */
@@ -96,9 +100,10 @@ body{
 }
 
 .side-bar{
+    position: relative;
+    z-index: -5;
     background: url(../images/bg-sidebar-mobile.svg) center no-repeat;
     background-size: cover;
-    width: 100%;
     padding: 30px 0;
     display: flex;
     justify-content: center;
@@ -126,16 +131,14 @@ body{
 }
 
 .step-information-one{
-    padding: 40px 20px;
-    background: var(--white);
-    margin: -80px auto 0;
-    width: 90%;
-    border-radius: 10px;
+    display: none;
 }
 .primary-header{
+    color: var(--marine-blue);
     font-size: var(--fs-400);
 }
 .primary-paragraph{
+    color: var(--cool-gray);
     font-size: var(--fs-200);
     margin: 10px 0 25px;
 }
@@ -169,6 +172,7 @@ body{
     /* Desktop layout differences */
     .step-type{
         display: block;
+        width: 120px;
     }
 
     .mobile-footer{
@@ -192,12 +196,12 @@ body{
     }
 
     .side-bar{
+        z-index: 5;
         border-radius: 10px;
         background: url(../images/bg-sidebar-desktop.svg) no-repeat;
         background-size: cover;
         display: block;
         padding: 15px 20px;
-        width: 240px;
         height: 450px;
     }
 
@@ -210,8 +214,7 @@ body{
         align-items: center;
         margin: 25px 0;
     }
-    
-    
+  
     .step-type p{
         color: var(--cool-gray);
         font-size: var(--fs-100);
@@ -224,14 +227,13 @@ body{
         font-weight: var(--fw-700);
     }
 
-    .step-information-one{
+    .step-information > div{
+        width: 100%;
         padding: 40px 80px 0;
         background: none;
         margin: 0;
-        width: auto;
         border-radius: none;
     }
-
     .step-information-one footer{
         display: flex;
         justify-content: flex-end;
