@@ -94,7 +94,7 @@ input::placeholder{
     margin: -80px 5% 0;
     flex-shrink: 0;
     transform: scale(1);
-    padding: 40px 20px;
+    padding: 30px 20px;
     background: var(--white);
     border-radius: 10px;
 }
@@ -115,7 +115,7 @@ body{
 
 .side-bar{
     position: relative;
-    z-index: -5;
+    z-index: 5;
     background: url(../images/bg-sidebar-mobile.svg) center no-repeat;
     background-size: cover;
     padding: 30px 0;
@@ -144,9 +144,6 @@ body{
     border: none;
 }
 
-.step-information-one{
-    display: none;
-}
 /* Step 2 */
 .step-information-two footer{
     display: none;
@@ -175,11 +172,18 @@ body{
     font-size: var(--fs-200);
     color: var(--marine-blue);
 }
-.billing-opt p{
+.billing-opt div p{
     font-size: var(--fs-200);
     color: var(--cool-gray);
     margin-top: 5px;
 }
+.billing-opt div .yearly-bonus{
+    font-size: var(--fs-100);
+    font-weight: var(--fw-500);
+    color: var(--marine-blue);
+    display: none;
+}
+
 
 .billing-duration{
     background: var(--magnolia);
@@ -193,6 +197,7 @@ body{
     display: flex;
     align-items: center;
 }
+
 .switch{
     background: var(--marine-blue);
     border-radius: 20px;
@@ -202,11 +207,26 @@ body{
     align-items: center;
     margin: 0 20px;
 }
+.switch.active{
+    justify-content: flex-end;
+}
 .switch > div{
     background: var(--white);
     height: 15px;
     width: 15px;
     border-radius: 50%;
+}
+
+/*Step 3*/
+.add-ons,
+.add-ons-opt{
+    display: flex;
+}
+.add-ons{
+    justify-content: space-between;
+}
+.add-ons input{
+    width: 20px;
 }
 
 .primary-header{
@@ -314,7 +334,7 @@ body{
 
     .step-information > div{
         width: 100%;
-        padding: 40px 60px 0;
+        padding: 30px 60px 0;
         background: none;
         margin: 0;
         border-radius: none;
@@ -327,7 +347,8 @@ body{
 
     /* Step 2 */
     .step-information-two footer{
-        display: block;
+        display: flex;
+        margin-top: 50px;
     }
     .billing{
         flex-direction: row;
@@ -339,7 +360,10 @@ body{
     .billing-opt > div{
         margin-top: 40px;
     }
-    
+    .yearly-bonus{
+        display: none;
+    }
+
 
     .next-step-btn{
         padding: 10px 15px;
