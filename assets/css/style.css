@@ -223,10 +223,30 @@ body{
     display: flex;
 }
 .add-ons{
+    border: 1px solid var(--cool-gray);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
     justify-content: space-between;
+    align-items: center;
 }
 .add-ons input{
     width: 20px;
+    margin-right: 10px;
+}
+.add-ons h3{
+    font-size: var(--fs-200);
+    color: var(--marine-blue);
+}
+.add-ons p{
+    font-size: var(--fs-100);
+    font-weight: var(--fw-400);
+    color: var(--purplish-blue);
+}
+.add-ons-opt p{
+    font-size: var(--fs-100);
+    font-weight: var(--fw-400);
+    color: var(--light-gray);
 }
 
 .primary-header{
