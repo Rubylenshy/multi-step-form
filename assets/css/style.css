@@ -221,18 +221,24 @@ body{
 .add-ons,
 .add-ons-opt{
     display: flex;
+    align-items: center;
+    align-self: center;
 }
 .add-ons{
     border: 1px solid var(--cool-gray);
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 10px;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; 
+}
+.add-ons.active,
+.add-ons:hover{
+    background: var(--magnolia);
+    border: 1px solid var(--marine-blue);
 }
 .add-ons input{
     width: 20px;
-    margin-right: 10px;
+    margin: 0 10px 0 0;
 }
 .add-ons h3{
     font-size: var(--fs-200);

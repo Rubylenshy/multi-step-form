@@ -51,3 +51,11 @@ switchPlan.addEventListener('click', ()=>{
         }
         }
 })
+
+const addOns = document.querySelectorAll('.add-ons')
+movie_list.addEventListener('click', (add)=>{
+    if (add.target.title == 'delete') {
+        const li = add.target.parentElement;
+        li.parentNode.removeChild(li);
+    }
+});
