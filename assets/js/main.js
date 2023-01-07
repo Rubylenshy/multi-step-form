@@ -10,6 +10,15 @@ for (let i = 0; i < sideBarBtn.length; i++) {
     window.addEventListener('load', ()=>{
         sideBarBtn[0].classList.add('active')
     })
+    sideBarBtn.forEach(btn=>{
+
+        btn.addEventListener('click', ()=>{
+            if (!this.btn) {
+                btn.classList.remove('active')
+            }
+            else{this.classList.add('active')}
+        })
+    })
     sideBarBtn[0].addEventListener('click', ()=>{
         stepOne.style.display = 'block'
     })
@@ -53,9 +62,3 @@ switchPlan.addEventListener('click', ()=>{
 })
 
 const addOns = document.querySelectorAll('.add-ons')
-movie_list.addEventListener('click', (add)=>{
-    if (add.target.title == 'delete') {
-        const li = add.target.parentElement;
-        li.parentNode.removeChild(li);
-    }
-});
