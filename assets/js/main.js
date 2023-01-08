@@ -10,15 +10,7 @@ for (let i = 0; i < sideBarBtn.length; i++) {
     window.addEventListener('load', ()=>{
         sideBarBtn[0].classList.add('active')
     })
-    sideBarBtn.forEach(btn=>{
-
-        btn.addEventListener('click', ()=>{
-            if (!this.btn) {
-                btn.classList.remove('active')
-            }
-            else{this.classList.add('active')}
-        })
-    })
+    
     sideBarBtn[0].addEventListener('click', ()=>{
         stepOne.style.display = 'block'
     })
@@ -36,6 +28,7 @@ for (let i = 0; i < sideBarBtn.length; i++) {
 
 const switchPlan = document.querySelector('.switch')
 const price = document.querySelectorAll('.bill-price')
+const addOnBill = stepThree.querySelectorAll('.add-on-bill')
 switchPlan.addEventListener('click', ()=>{
     switchPlan.classList.toggle('active')
     if (switchPlan.classList.contains('active')) {
@@ -47,6 +40,10 @@ switchPlan.addEventListener('click', ()=>{
             price[0].textContent = '$90/yr'
             price[1].textContent = '$120/yr'
             price[2].textContent = '$150/yr'
+
+            addOnBill[0].textContent = '+$10/yr'
+            addOnBill[1].textContent = '+$20/yr'
+            addOnBill[2].textContent = '+$20/yr'
         }
     }
     else{ 
@@ -57,8 +54,26 @@ switchPlan.addEventListener('click', ()=>{
             price[0].textContent = '$9/mo'
             price[1].textContent = '$12/mo'
             price[2].textContent = '$15/mo'
+
+            addOnBill[0].textContent = '+$1/mo'
+            addOnBill[1].textContent = '+$2/mo'
+            addOnBill[2].textContent = '+$2/mo'
         }
         }
 })
 
 const addOns = document.querySelectorAll('.add-ons')
+
+// const divSwitch = document.querySelector('.switch div')
+// const addOnBill = stepThree.querySelectorAll('.add-on-bill')
+// if (divSwitch.style.justifyContent = 'flex-end') {
+//     for (let i = 0; i < addOnBill.length; i++) {
+//         addOnBill[0].textContent = '+$10/yr'
+//         addOnBill[1].textContent = '+$20/yr'
+//         addOnBill[2].textContent = '+$20/yr'
+//     }
+// }else{
+//     addOnBill[0].textContent = '+$1/mo'
+//     addOnBill[1].textContent = '+$2/mo'
+//     addOnBill[2].textContent = '+$2/mo'
+// }
