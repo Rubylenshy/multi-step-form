@@ -24,6 +24,12 @@ for (let i = 0; i < sideBarBtn.length; i++) {
         stepOne.style.display = 'none'
         stepTwo.style.display = 'none'
     })
+    sideBarBtn[3].addEventListener('click', ()=>{
+        stepFour.style.display = 'block'
+        stepOne.style.display = 'none'
+        stepTwo.style.display = 'none'
+        stepThree.style.display = 'none'
+    })
 }
 
 const switchPlan = document.querySelector('.switch')
