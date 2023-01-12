@@ -34,6 +34,10 @@
     box-sizing: border-box;
     font-family: var(--ff-ubuntu);
 }
+html{
+    scroll-behavior: smooth;
+}
+
 .flex-row{
     display: flex;
 }
@@ -89,6 +93,7 @@ input::placeholder{
     max-width: 100%;
     margin: -80px 0 80px;
     overflow: hidden;
+    scroll-snap-type: x mandatory;
 }
 .step-information > div{
     width: 90%;
@@ -313,6 +318,18 @@ body{
 }
 .form-input{
     margin-bottom: 10px;
+}
+
+/*Step 5*/
+.step-information-five{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#step-five .primary-header{
+    margin: 20px 0 0;
 }
 
 .mobile-footer{

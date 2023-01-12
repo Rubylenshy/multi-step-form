@@ -47,7 +47,7 @@
       <!---->
       <div class="step-information">
         <!--Step 1-->
-        <div class="step-information-one">
+        <div class="step-information-one" id="step-one">
           <h1 class="primary-header">Personal info</h1>
           <p class="primary-paragraph">Please provide your name, email address, and phone number.</p>
   
@@ -67,11 +67,11 @@
           </form>
   
           <footer>
-            <a href=""><button type="button" class="next-step-btn">Next Step</button></a>
+            <a href="#step-two"><button type="button" class="next-step-btn">Next Step</button></a>
           </footer>
         </div>
         <!--Step 2-->
-        <div class="step-information-two">
+        <div class="step-information-two" id="step-two">
           <h1 class="primary-header">Select your plan</h1>
           <p class="primary-paragraph">You have the option of monthly or yearly billing.</p>
           <div class="billing flex j-between">
@@ -109,12 +109,12 @@
             <p>Yearly</p>
           </div>
           <footer class="">
-            <a href="#"><button class="go-back">Go Back</button></a>
-            <a href="#"><button type="button" class="next-step-btn">Next Step</button></a>
+            <a href="#step-one"><button class="go-back">Go Back</button></a>
+            <a href="#step-three"><button type="button" class="next-step-btn">Next Step</button></a>
           </footer>
         </div>
         <!--Step 3-->
-        <div class="step-information-three">
+        <div class="step-information-three" id="step-three">
           <h1 class="primary-header">Pick Add-ons</h1>
           <p class="primary-paragraph">Add-ons help enhance your gaming experience.</p>
 
@@ -150,12 +150,12 @@
           </div>
 
           <footer class="">
-            <a href="#"><button class="go-back">Go Back</button></a>
-            <a href="#"><button type="button" class="next-step-btn">Next Step</button></a>
+            <a href="#step-two"><button class="go-back">Go Back</button></a>
+            <a href="#step-four"><button type="button" class="next-step-btn">Next Step</button></a>
           </footer>
         </div>
         <!--Step 4-->
-        <div class="step-information-four">
+        <div class="step-information-four" id="step-four">
           <h1 class="primary-header">Finishing up</h1>
           <p class="primary-paragraph">Double-check everything looks OK before confirming.</p>
           
@@ -179,12 +179,12 @@
           </div>
           
           <footer class="">
-            <a href="#"><button class="go-back">Go Back</button></a>
-            <a href="#"><button type="button" class="next-step-btn">Next Step</button></a>
+            <a href="#step-three"><button class="go-back">Go Back</button></a>
+            <a href="#step-five"><button type="button" class="next-step-btn">Next Step</button></a>
           </footer>
         </div>
         <!--Step 5-->
-        <div class="step-information-five">
+        <div class="step-information-five" id="step-five">
           <img src="assets/images/icon-thank-you.svg" alt="Check mark">
           <h1 class="primary-header">Thank you</h1>
           <p class="primary-paragraph">Thanks for confirming your subscription! We hope you have fun 
